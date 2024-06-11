@@ -2580,7 +2580,7 @@ void effect3() {
 
 #### 7. 实验结果
 
-正确的主板板型和串口端口设置完成后，则上传代码。若代码上传不成功，提示“**FastLED.h: No such file or directory**”，请添加库文件。其添加方法请参照：[添加Arduino库文件](https://temp.keyesrobot.cn/projects/KE3095/en/latest/docs/Arduino_C_%E6%95%99%E7%A8%8B/Arduino_C_%E6%95%99%E7%A8%8B.html#arduino)
+正确的主板板型和串口端口设置完成后，则上传代码。若代码上传不成功，提示“**FastLED.h: No such file or directory**”，请添加库文件。其添加方法请参照：[添加Arduino库文件](https://www.keyesrobot.cn/projects/KE3095/en/latest/docs/Arduino_C_%E6%95%99%E7%A8%8B/Arduino_C_%E6%95%99%E7%A8%8B.html#arduino)
 
 再次上传代码，代码上传成功后，拔下USB线断电，按照接线图正确接好模块后再用USB线连接到计算机上电，我们可以看到模块上的4个RGB LED亮出对应的颜色灯的效果。
 
@@ -2904,7 +2904,7 @@ void loop() {
 
 ###### （3）实验结果
 
-正确的主板板型和串口端口设置完成后，则上传代码。若代码上传不成功，提示“**Servo.h: No such file or directory**”，请添加库文件。其添加方法请参照：[添加Arduino库文件](https://temp.keyesrobot.cn/projects/KE3095/en/latest/docs/Arduino_C_%E6%95%99%E7%A8%8B/Arduino_C_%E6%95%99%E7%A8%8B.html#arduino)
+正确的主板板型和串口端口设置完成后，则上传代码。若代码上传不成功，提示“**Servo.h: No such file or directory**”，请添加库文件。其添加方法请参照：[添加Arduino库文件](https://www.keyesrobot.cn/projects/KE3095/en/latest/docs/Arduino_C_%E6%95%99%E7%A8%8B/Arduino_C_%E6%95%99%E7%A8%8B.html#arduino)
 
 再次上传代码，代码上传成功后，拔下USB线断电，按照接线图正确接好舵机，再用USB线连接到计算机上电。上电后，舵机由0度转到90度，停顿1秒；再转到180度，停顿1秒；然后回到0度，停顿1秒，循环转动。
 
@@ -3212,7 +3212,7 @@ void loop() {
 
 #### 7. 实验结果
 
-正确的主板板型和串口端口设置完成后，则上传代码。若代码上传不成功，提示“**IRremote.hpp: No such file or directory**”，请添加库文件。其添加方法请参照：[添加Arduino库文件](https://temp.keyesrobot.cn/projects/KE3095/en/latest/docs/Arduino_C_%E6%95%99%E7%A8%8B/Arduino_C_%E6%95%99%E7%A8%8B.html#arduino)
+正确的主板板型和串口端口设置完成后，则上传代码。若代码上传不成功，提示“**IRremote.hpp: No such file or directory**”，请添加库文件。其添加方法请参照：[添加Arduino库文件](https://www.keyesrobot.cn/projects/KE3095/en/latest/docs/Arduino_C_%E6%95%99%E7%A8%8B/Arduino_C_%E6%95%99%E7%A8%8B.html#arduino)
 
 再次上传代码，代码上传成功后，拔下USB线断电，按照接线图正确接好模块后再用USB线连接到计算机上电，打开串口监视器，设置波特率为 **<u>9600</u>**。
 
@@ -3337,7 +3337,7 @@ void loop() {
 
 #### 7. 实验结果
 
-正确的主板板型和串口端口设置完成后，则上传代码。若代码上传不成功，提示“**xht11.h: No such file or directory**”，请添加库文件。其添加方法请参照：[添加Arduino库文件](https://temp.keyesrobot.cn/projects/KE3095/en/latest/docs/Arduino_C_%E6%95%99%E7%A8%8B/Arduino_C_%E6%95%99%E7%A8%8B.html#arduino)
+正确的主板板型和串口端口设置完成后，则上传代码。若代码上传不成功，提示“**xht11.h: No such file or directory**”，请添加库文件。其添加方法请参照：[添加Arduino库文件](https://www.keyesrobot.cn/projects/KE3095/en/latest/docs/Arduino_C_%E6%95%99%E7%A8%8B/Arduino_C_%E6%95%99%E7%A8%8B.html#arduino)
 
 再次上传代码，代码上传成功后，拔下USB线断电，按照接线图正确接好模块后再用USB线连接到计算机上电，打开串口监视器，设置波特率为 **<u>9600</u>**。
 
@@ -3572,7 +3572,7 @@ void displayFloatNum(float num){
 
 #### 7. 实验结果
 
-正确的主板板型和串口端口设置完成后，则上传代码。若代码上传不成功，提示“**TM1650.h: No such file or directory**”，请添加库文件。其添加方法请参照：[添加Arduino库文件](https://temp.keyesrobot.cn/projects/KE3095/en/latest/docs/Arduino_C_%E6%95%99%E7%A8%8B/Arduino_C_%E6%95%99%E7%A8%8B.html#arduino)
+正确的主板板型和串口端口设置完成后，则上传代码。若代码上传不成功，提示“**TM1650.h: No such file or directory**”，请添加库文件。其添加方法请参照：[添加Arduino库文件](https://www.keyesrobot.cn/projects/KE3095/en/latest/docs/Arduino_C_%E6%95%99%E7%A8%8B/Arduino_C_%E6%95%99%E7%A8%8B.html#arduino)
 
 再次上传代码，代码上传成功后，拔下USB线断电。按照接线图正确接好模块后再用USB线连接到计算机上电。4位数码管显示数字，从0开始，每1000毫秒加1，直至加到9999后又从0开始循环。
 
@@ -3719,7 +3719,7 @@ void loop(){
 
 #### 8. 实验结果
 
-正确的主板板型和串口端口设置完成后，则上传代码。若代码上传不成功，提示“**Matrix.h: No such file or directory**”，请添加库文件。其添加方法请参照：[添加Arduino库文件](https://temp.keyesrobot.cn/projects/KE3095/en/latest/docs/Arduino_C_%E6%95%99%E7%A8%8B/Arduino_C_%E6%95%99%E7%A8%8B.html#arduino)
+正确的主板板型和串口端口设置完成后，则上传代码。若代码上传不成功，提示“**Matrix.h: No such file or directory**”，请添加库文件。其添加方法请参照：[添加Arduino库文件](https://www.keyesrobot.cn/projects/KE3095/en/latest/docs/Arduino_C_%E6%95%99%E7%A8%8B/Arduino_C_%E6%95%99%E7%A8%8B.html#arduino)
 
 再次上传代码，代码上传成功后，拔下USB线断电。按照接线图正确接好模块后再用USB线连接到计算机上电。HT16K33_8X8点阵模块显示“笑脸”图案。
 
@@ -4056,7 +4056,7 @@ void loop()
 
 #### 7. 实验结果
 
-正确的主板板型和串口端口设置完成后，则上传代码。若代码上传不成功，提示“**Adafruit_GFX.h: No such file or directory**”，“**Adafruit_ST7735.h: No such file or directory**”和其他信息，请添加库文件。其添加方法请参照：[添加Arduino库文件](https://temp.keyesrobot.cn/projects/KE3095/en/latest/docs/Arduino_C_%E6%95%99%E7%A8%8B/Arduino_C_%E6%95%99%E7%A8%8B.html#arduino)
+正确的主板板型和串口端口设置完成后，则上传代码。若代码上传不成功，提示“**Adafruit_GFX.h: No such file or directory**”，“**Adafruit_ST7735.h: No such file or directory**”和其他信息，请添加库文件。其添加方法请参照：[添加Arduino库文件](https://www.keyesrobot.cn/projects/KE3095/en/latest/docs/Arduino_C_%E6%95%99%E7%A8%8B/Arduino_C_%E6%95%99%E7%A8%8B.html#arduino)
 
 再次上传代码，代码上传成功后，拔下USB线断电。按照接线图正确接好模块后再用USB线连接到计算机上电，TFT显示屏依次显示如下：
 
@@ -4201,7 +4201,7 @@ void ShowReaderDetails() {
 
 #### 7. 实验结果
 
-正确的主板板型和串口端口设置完成后，则上传代码。若代码上传不成功，提示“**MFRC522_I2C.h: No such file or directory**”，请添加库文件。其添加方法请参照：[添加Arduino库文件](https://temp.keyesrobot.cn/projects/KE3095/en/latest/docs/Arduino_C_%E6%95%99%E7%A8%8B/Arduino_C_%E6%95%99%E7%A8%8B.html#arduino)
+正确的主板板型和串口端口设置完成后，则上传代码。若代码上传不成功，提示“**MFRC522_I2C.h: No such file or directory**”，请添加库文件。其添加方法请参照：[添加Arduino库文件](https://www.keyesrobot.cn/projects/KE3095/en/latest/docs/Arduino_C_%E6%95%99%E7%A8%8B/Arduino_C_%E6%95%99%E7%A8%8B.html#arduino)
 
 再次上传代码，代码上传成功后，拔下USB线断电。按照接线图正确接好模块后再用USB线连接到计算机上电，打开串口监视器，设置波特率为 **<u>115200</u>**。用IC卡和钥匙扣靠近RFID模块，串口监视器打印出RFID刷卡模块读取到的数据信息。
 
@@ -4343,7 +4343,7 @@ void loop() {  // 把主代码放在这里，反复运行:
 
 #### 7. 实验结果
 
-正确的主板板型和串口端口设置完成后，则上传代码。若代码上传不成功，提示“**Waveshare_BMP388.h: No such file or directory**”，请添加库文件。其添加方法请参照：[添加Arduino库文件](https://temp.keyesrobot.cn/projects/KE3095/en/latest/docs/Arduino_C_%E6%95%99%E7%A8%8B/Arduino_C_%E6%95%99%E7%A8%8B.html#arduino)
+正确的主板板型和串口端口设置完成后，则上传代码。若代码上传不成功，提示“**Waveshare_BMP388.h: No such file or directory**”，请添加库文件。其添加方法请参照：[添加Arduino库文件](https://www.keyesrobot.cn/projects/KE3095/en/latest/docs/Arduino_C_%E6%95%99%E7%A8%8B/Arduino_C_%E6%95%99%E7%A8%8B.html#arduino)
 
 再次上传代码，代码上传成功后，拔下USB线断电。按照接线图正确接好模块后再用USB线连接到计算机上电，打开串口监视器，设置波特率为 **<u>115200</u>**，串口监视器显示大气压、海拔和温度。
 
@@ -4561,7 +4561,7 @@ void loop(){
 
 #### 7. 实验结果
 
-正确的主板板型和串口端口设置完成后，则上传代码。若代码上传不成功，提示“**paj7620.h: No such file or directory**”，请添加库文件。其添加方法请参照：[添加Arduino库文件](https://temp.keyesrobot.cn/projects/KE3095/en/latest/docs/Arduino_C_%E6%95%99%E7%A8%8B/Arduino_C_%E6%95%99%E7%A8%8B.html#arduino)
+正确的主板板型和串口端口设置完成后，则上传代码。若代码上传不成功，提示“**paj7620.h: No such file or directory**”，请添加库文件。其添加方法请参照：[添加Arduino库文件](https://www.keyesrobot.cn/projects/KE3095/en/latest/docs/Arduino_C_%E6%95%99%E7%A8%8B/Arduino_C_%E6%95%99%E7%A8%8B.html#arduino)
 
 再次上传代码，代码上传成功后，拔下USB线断电。按照接线图正确接好模块后再用USB线连接到计算机上电，打开串口监视器，设置波特率为 **<u>9600</u>**，当我们在传感器前方摆动手势时，串口监视器上将显示我们对应的手势，如下图。(<span style="color: rgb(255, 76, 65);">注意：在我们测试手势时会有大约0.8秒的延迟。</span>)
 
