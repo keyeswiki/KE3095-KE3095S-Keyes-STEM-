@@ -55,24 +55,24 @@ void setup() {
 void loop() {
   distance = checkdistance();//超声波测距
   displayFloatNum(distance); //数码管显示距离
-    if (distance <= 10) {   
-      fill_solid(leds, NUM_LEDS, CRGB::Red);  // SK6812 RGB模块4个LED灯珠亮红色灯
-      FastLED.show();
-      tone(BUZZER_PIN, 262); //DO播放1000ms
-      delay(1000);
+  if (distance <= 10) {   
+    fill_solid(leds, NUM_LEDS, CRGB::Red);  // SK6812 RGB模块4个LED灯珠亮红色灯
+    FastLED.show();
+    tone(BUZZER_PIN, 262); //DO播放1000ms
+    delay(1000);
 
-  } else if (distance > 10 && distance <= 20) {
-      fill_solid(leds, NUM_LEDS, CRGB::Green);  // SK6812 RGB模块4个LED灯珠亮绿色灯
-      FastLED.show();
-      tone(BUZZER_PIN, 349); //Fa播放500ms
-      delay(500);
+} else if (distance > 10 && distance <= 20) {
+    fill_solid(leds, NUM_LEDS, CRGB::Green);  // SK6812 RGB模块4个LED灯珠亮绿色灯
+    FastLED.show();
+    tone(BUZZER_PIN, 349); //Fa播放500ms
+    delay(500);
 
- } else {
+} else {
     fill_solid(leds, NUM_LEDS, CRGB::Blue);  // SK6812 RGB模块4个LED灯珠亮蓝色灯
     FastLED.show();
     tone(BUZZER_PIN, 494); //Si播放125ms
     delay(125);
-   }
+  }
 }
 
 void displayFloatNum(float distance){

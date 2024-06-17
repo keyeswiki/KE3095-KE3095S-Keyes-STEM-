@@ -1,0 +1,1718 @@
+<script defer src="main.bundle.js"></script>
+<category id="keyes" name="Keyes sensor" colour="20">
+
+	<!--                  控制输出                 -->
+	<category id="keyes_controloutput" name="数字输出" colour="20">
+
+		<block type="ke_a_Write">
+			<value name="PIN">
+				<shadow type="pins_pwm"></shadow>
+			</value>
+			<value name="num">
+				<shadow type="math_number">
+					<field name="NUM">0</field>
+				</shadow>
+			</value>
+		</block>
+
+		<block type="ke_led_r">
+			<value name="PIN">
+				<shadow type="pins_digital"></shadow>
+			</value>
+		</block>
+
+	
+		<block type="ke_led_y">
+			<value name="PIN">
+				<shadow type="pins_digital"></shadow>
+			</value>
+		</block>
+
+		<block type="ke_led_g">
+			<value name="PIN">
+				<shadow type="pins_digital"></shadow>
+			</value>
+		</block>
+
+
+		<block type="ke_led_b">
+			<value name="PIN">
+				<shadow type="pins_digital"></shadow>
+			</value>
+		</block>
+
+		<block type="ke_led_w">
+			<value name="PIN">
+				<shadow type="pins_digital"></shadow>
+			</value>
+		</block>
+
+
+
+		<block type="ke_dual">
+			<value name="PIN1">
+				<shadow type="pins_digital">
+					<field name="PIN">3</field>
+				</shadow>
+			</value>
+			<value name="PIN2">
+				<shadow type="pins_digital">
+					<field name="PIN">4</field>
+				</shadow>
+			</value>
+		</block>
+
+<!--
+		<block type="ke_qcd">
+			<value name="PIN">
+				<shadow type="pins_digital"></shadow>
+			</value>
+		</block>
+	-->
+<!--           RGB1      -->
+		<block type="ke_rgb1_1">
+			<value name="PIN1">
+				<shadow type="pins_digital"></shadow>
+			</value>
+			<value name="PIN2">
+				<shadow type="pins_digital"></shadow>
+			</value>
+			<value name="PIN3">
+				<shadow type="pins_digital"></shadow>
+			</value>
+		</block>
+
+		<block type="ke_rgb1_2">
+			<value name="R">
+				<shadow type="pins_digital">
+					<field name="PIN">3</field>
+				</shadow>
+			</value>
+			<value name="r">
+				<shadow type="math_number">
+					<field name="NUM">0</field>
+				</shadow>
+			</value>
+			<value name="G">
+				<shadow type="pins_digital">
+					<field name="PIN">5</field>
+				</shadow>
+			</value>
+			<value name="g">
+				<shadow type="math_number">
+					<field name="NUM">0</field>
+				</shadow>
+			</value>
+			<value name="B">
+				<shadow type="pins_digital">
+					<field name="PIN">6</field>
+				</shadow>
+			</value>
+			<value name="b">
+				<shadow type="math_number">
+					<field name="NUM">0</field>
+				</shadow>
+			</value>
+
+		</block>
+
+		<!--           RGB2     -->
+		<block type="ke_rgb2_1">
+			<value name="PIN1">
+				<shadow type="pins_digital"></shadow>
+			</value>
+			<value name="PIN2">
+				<shadow type="pins_digital"></shadow>
+			</value>
+			<value name="PIN3">
+				<shadow type="pins_digital"></shadow>
+			</value>
+		</block>
+
+		<block type="ke_rgb2_2">
+			<value name="R">
+				<shadow type="pins_digital">
+					<field name="PIN">3</field>
+				</shadow>
+			</value>
+			<value name="r">
+				<shadow type="math_number">
+					<field name="NUM">0</field>
+				</shadow>
+			</value>
+			<value name="G">
+				<shadow type="pins_digital">
+					<field name="PIN">5</field>
+				</shadow>
+			</value>
+			<value name="g">
+				<shadow type="math_number">
+					<field name="NUM">0</field>
+				</shadow>
+			</value>
+			<value name="B">
+				<shadow type="pins_digital">
+					<field name="PIN">6</field>
+				</shadow>
+			</value>
+			<value name="b">
+				<shadow type="math_number">
+					<field name="NUM">0</field>
+				</shadow>
+			</value>
+
+		</block>
+
+	
+		<block type="ke_w_buzzer1">
+			<value name="PIN">
+				<shadow type="pins_digital"></shadow>
+			</value>
+		</block>
+	
+
+		<block type="ke_tone01">
+			<value name="tone">
+				<shadow type="FREQUENCY"></shadow>
+			</value>
+		</block>
+
+		      
+		<block type="ke_buzzer">
+			<value name="PIN">
+				   <shadow type="pins_digital"></shadow>
+			    </value>
+			<value name="FREQUENCY">
+				   <shadow type="ke_tone01"></shadow>
+			</value>
+			
+			<value name="DURATION">
+				<shadow type="math_number">
+					<field name="NUM">1000</field>
+				</shadow>
+			</value>
+
+			
+		</block> 
+
+		
+		<block type="ke_music">
+			<value name="PIN">
+				<shadow type="pins_digital"></shadow>
+			</value>
+			
+		</block>  
+		
+		
+		<block type="ke_notone">
+			<value name="PIN">
+				<shadow type="pins_digital"></shadow>
+			</value>
+		</block>
+
+
+		<block type="ke_relay">
+			<value name="PIN">
+				<shadow type="pins_digital"></shadow>
+			</value>
+		</block> 
+
+        <!--speaker -->
+        <block type="ke_speaker">
+          <value name="PIN">
+              <shadow type="pins_digital"></shadow>
+          </value>
+          <value name="FREQUENCY">
+              <shadow type="tone_notes"></shadow>
+          </value>
+        </block>
+      <!--speaker2 -->
+        <block type="ke_speaker2">
+          <value name="PIN">
+              <shadow type="pins_digital"></shadow>
+          </value>
+          <value name="FREQUENCY">
+              <shadow type="math_number">
+                  <field name="NUM">200</field>
+              </shadow>
+          </value>
+          <value name="DURATION">
+              <shadow type="math_number">
+                  <field name="NUM">1000</field>
+              </shadow>
+          </value>
+        </block>
+      <!-- notone 停止发声-->
+        <block type="ke_speaker_notone">
+          <value name="PIN">
+              <shadow type="pins_digital"></shadow>
+          </value>
+        </block>
+
+	    <block type="ke_v_motor">
+			<value name="PIN">
+				<shadow type="pins_digital"></shadow>
+			</value>
+		</block> 
+
+		<block type="ke_jg">
+			<value name="PIN">
+				<shadow type="pins_digital"></shadow>
+			</value>
+		</block> 
+	
+	<!--
+		<block type="ke_motor">
+			<value name="PIN1">
+				<shadow type="pins_digital"></shadow>
+			</value>
+			<value name="PIN2">
+				<shadow type="pins_digital"></shadow>
+			</value>
+		</block>
+
+		<block type="ke_motor001">
+			<value name="PIN1">
+				<shadow type="pins_digital"></shadow>
+			</value>
+			<value name="PIN2">
+				<shadow type="pins_digital"></shadow>
+			</value>
+
+			<value name="pwma">
+				<shadow type="math_number">
+					<field name="NUM">0</field>
+				</shadow>
+			</value>
+			<value name="pwmb">
+				<shadow type="math_number">
+					<field name="NUM">0</field>
+				</shadow>
+			</value>
+
+		</block>
+	-->
+
+		<block type="ke_motor2">
+			<value name="PIN1">
+				<shadow type="pins_digital"></shadow>
+			</value>
+			<value name="PIN2">
+				<shadow type="pins_digital"></shadow>
+			</value>
+		</block>
+
+<!--
+		<block type="ke_motor002">
+			<value name="PIN1">
+				<shadow type="pins_digital"></shadow>
+			</value>
+			<value name="PIN2">
+				<shadow type="pins_digital"></shadow>
+			</value>
+
+			<value name="pwma">
+				<shadow type="math_number">
+					<field name="NUM">0</field>
+				</shadow>
+			</value>
+			<value name="pwmb">
+				<shadow type="math_number">
+					<field name="NUM">0</field>
+				</shadow>
+			</value>
+		</block>
+-->
+		
+
+<!--      servo 舵机        	 -->
+
+
+		<block type="ke_servo">
+			<value name="PIN">
+				<shadow type="pins_digital"></shadow>
+			</value>
+			<value name="angle">
+				<shadow type="math_number">
+					<field name="NUM">0</field>
+				</shadow>
+			</value>
+			<value name="time">
+				<shadow type="math_number">
+					<field name="NUM">0</field>
+				</shadow>
+			</value>
+		</block>
+
+		<block type="ke_servo_r">
+			<value name="PIN">
+				<shadow type="pins_digital"></shadow>
+			</value>
+		</block>
+
+	
+	
+	</category>
+
+
+	<!--                数字传感器              -->
+	<category id="digitalRead" name="数字输入" colour="20">
+
+		<!--          人体红外传感器               -->
+		<block type="ke_ir_g">
+			<value name="PIN">
+				<shadow type="pins_digital"></shadow>
+			</value>
+		</block>
+
+		<!--          火焰传感器     -->         
+		<block type="ke_flame">
+			<value name="PIN">
+				<shadow type="pins_digital"></shadow>
+			</value>
+		</block>
+		 
+		<!--          霍尔传感器               -->
+		<block type="ke_hall">
+			<value name="PIN">
+				<shadow type="pins_digital"></shadow>
+			</value>
+		</block>
+
+		<!--          敲击传感器               -->
+		<block type="ke_crash">
+			<value name="PIN">
+				<shadow type="pins_digital"></shadow>
+			</value>
+		</block>
+
+		<!--          按键传感器               -->
+		<block type="ke_button">
+			<value name="PIN">
+				<shadow type="pins_digital"></shadow>
+			</value>
+		</block>
+
+			<!--         自锁按键              -->
+		<block type="ke_sl_button">
+			<value name="PIN">
+				<shadow type="pins_digital"></shadow>
+			</value>
+		</block>
+		
+		<!--          电容触摸传感器               -->
+		<block type="ke_tuoch">
+			<value name="PIN">
+				<shadow type="pins_digital"></shadow>
+			</value>
+		</block>
+		<!--          碰撞传感器               -->
+		<block type="ke_knock">
+			<value name="PIN">
+				<shadow type="pins_digital"></shadow>
+			</value>
+		</block>
+
+		<!--          倾斜传感器               -->
+		<block type="ke_tilt">
+			<value name="PIN">
+				<shadow type="pins_digital"></shadow>
+			</value>
+		</block>
+
+		<!--          振动传感器               -->
+		<block type="ke_shake">
+			<value name="PIN">
+				<shadow type="pins_digital"></shadow>
+			</value>
+		</block>
+
+		
+
+		<!--          干簧管传感器               -->
+		<block type="ke_reed_s">
+			<value name="PIN">
+				<shadow type="pins_digital"></shadow>
+			</value>
+		</block>
+
+		<!--          循迹传感器               -->
+		<block type="ke_track">
+			<value name="PIN">
+				<shadow type="pins_digital"></shadow>
+			</value>
+		</block>
+	
+
+		<!--          避障传感器               -->
+		<block type="ke_avoid">
+			<value name="PIN">
+				<shadow type="pins_digital"></shadow>
+			</value>
+		</block>
+
+		<!--          光折断传感器               -->
+		<block type="ke_light_b">
+			<value name="PIN">
+				<shadow type="pins_digital"></shadow>
+			</value>
+		</block>
+
+		<!--          烟雾数字传感器               -->
+		<block type="ke_smoke_D">
+			<value name="PIN">
+				<shadow type="pins_digital"></shadow>
+			</value>
+		</block>
+
+		<!--          酒精数字传感器               -->
+		<block type="ke_alcohol_D">
+			<value name="PIN">
+				<shadow type="pins_digital"></shadow>
+			</value>
+		</block>
+
+		
+
+	</category>
+
+	<!--               模拟传感器              -->
+	<category id="analogRead" name="模拟输入" colour="20">
+
+		<!--              模拟温度传感器              -->
+		<block type="ke_analog_t">
+			<value name="PIN">
+				<shadow type="pins_analog"></shadow>
+			</value>
+		</block>
+		<!--              声音传感器              -->
+		<block type="ke_sound">
+			<value name="PIN">
+				<shadow type="pins_analog"></shadow>
+			</value>
+		</block>
+		<!--              光线传感器              -->
+		<block type="ke_light">
+			<value name="PIN">
+				<shadow type="pins_analog"></shadow>
+			</value>
+		</block>  
+
+		<!--              紫外线传感器              -->
+		<block type="ke_UV">
+			<value name="PIN">
+				<shadow type="pins_analog"></shadow>
+			</value>
+		</block>  
+
+       <!--              陶瓷压电传感器              -->
+		<block type="ke_Piezo">
+			<value name="PIN">
+				<shadow type="pins_analog"></shadow>
+			</value>
+		</block>  
+		<!--              电位器传感器              -->
+		<block type="ke_potentiometer">
+			<value name="PIN">
+				<shadow type="pins_analog"></shadow>
+			</value>
+		</block>
+		<!--              LM35传感器              -->
+		<block type="ke_lm35">
+			<value name="PIN">
+				<shadow type="pins_analog"></shadow>
+			</value>
+		</block>
+		          <!--    滑动电位器         -->    
+		<block type="ke_slide_potentiometer">
+			<value name="PIN">
+				<shadow type="pins_analog"></shadow>
+			</value>
+		</block>
+		 
+		         <!--     TEMT6000环境光           -->   
+		<block type="ke_temt6000">
+			<value name="PIN">
+				<shadow type="pins_analog"></shadow>
+			</value>
+		</block>
+		
+		        <!--      水蒸气传感器            -->     
+		<block type="ke_steam">
+			<value name="PIN">
+				<shadow type="pins_analog"></shadow>
+			</value>
+		</block>
+		 
+		       <!--      薄膜压力传感器          -->       
+		<block type="ke_film_p">
+			<value name="PIN">
+				<shadow type="pins_analog"></shadow>
+			</value>
+		</block>
+		 -->
+		
+
+		<!--              烟雾传感器              -->
+		<block type="ke_smoke">
+			<value name="PIN">
+				<shadow type="pins_analog"></shadow>
+			</value>
+		</block>
+		<!--              酒精传感器              -->
+		<block type="ke_alcohol">
+			<value name="PIN">
+				<shadow type="pins_analog"></shadow>
+			</value>
+		</block>
+
+	
+		      <!--         火焰模拟传感器               -->   
+		<block type="ke_fire2">
+			<value name="PIN">
+				<shadow type="pins_analog"></shadow>
+			</value>
+		</block>
+		
+		          <!--    电压传感器        -->    
+		<block type="ke_Voltage">
+			<value name="PIN">
+				<shadow type="pins_analog"></shadow>
+			</value>
+		</block>
+
+		          <!--    电流传感器         -->    
+		<block type="ke_Current">
+			<value name="PIN">
+				<shadow type="pins_analog"></shadow>
+			</value>
+		</block>		
+		
+	</category>
+
+	
+
+	<category id="print" name="显示模块" colour="20">
+
+           <!--            2812RGB灯               -->        
+		<block type="ke_rgb2812">
+			<value name="PIN">
+				<shadow type="pins_digital"></shadow>
+			</value>
+			<value name="num01">
+				<shadow type="math_number">
+					<field name="NUM">0</field>
+				</shadow>
+			</value>
+			<value name="red">
+				<shadow type="math_number">
+					<field name="NUM">0</field>
+				</shadow>
+			</value>
+			<value name="green">
+				<shadow type="math_number">
+					<field name="NUM">0</field>
+				</shadow>
+			</value>
+			<value name="blue">
+				<shadow type="math_number">
+					<field name="NUM">0</field>
+				</shadow>
+			</value>
+		</block>
+		
+  <!--         1650四位数码管模块              -->   
+  <!--4 digital display init-->
+        <block type="ke_4digitdisplay_init">
+          <value name="PIN1">
+              <shadow type="pins_digital">
+                <field name="PIN">10</field>
+              </shadow>
+          </value>
+          <value name="PIN2">
+              <shadow type="pins_digital">
+                <field name="PIN">11</field>
+              </shadow>
+          </value>
+        </block>
+      <!--4 digital display power-->
+        <block type="ke_4digitdisplay_power">
+            <field name="STAT">clear</field>
+        </block>
+      <!--4 digital display displayString -->
+        <block type="ke_4digitdisplay_displayString">
+          <value name="VALUE">
+              <shadow type="text">
+                  <field name="TEXT">1234</field>
+              </shadow>
+          </value>
+        </block>
+      <!--4 digital display displayNumber -->
+        <block type="ke_4digitdisplay_displayNumber">
+          <value name="VALUE">
+              <shadow type="math_number">
+                <field name="NUM">0</field>
+              </shadow>
+          </value>
+        </block> 
+      <!--4 digital display showDot -->
+        <block type="ke_4digitdisplay_showDot">
+          <value name="DOTNUM">
+            <shadow type="math_number">
+              <field name="NUM">2</field>
+            </shadow>
+          </value>
+        </block>  
+      <!--4 digital display Brightness -->
+        <block type="ke_4digitdisplay_Brightness">
+          <value name="brightness">
+            <shadow type="math_number">
+              <field name="NUM">1</field>
+            </shadow>
+          </value>
+        </block>  
+      <!--4 digital display time -->
+        <block type="ke_4digitdisplay_Time">
+          <value name="time_hour">
+            <shadow type="math_number">
+              <field name="NUM">12</field>
+            </shadow>
+          </value>
+          <value name="time_minute">
+            <shadow type="math_number">
+              <field name="NUM">1</field>
+            </shadow>
+          </value>
+          <field name="STAT">displaySEC_BLINK</field>
+        </block>
+
+
+ <!--         1637四位数码管模块              -->   
+<!--
+	<block type="ke_display_TM1637_init">
+    </block>
+    <block type="ke_display_TM1637_Brightness">
+      <value name="Brightness">
+        <shadow type="math_number">
+          <field name="NUM">20</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="ke_display_TM1637_clearDisplay"></block>
+
+    <block type="ke_display_TM1637_displyPrint">
+      <value name="VALUE">
+        <shadow type="text">
+          <field name="TEXT">2345</field>
+        </shadow>
+      </value>
+      <value name="Speed">
+        <shadow type="math_number">
+          <field name="NUM">300</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="ke_display_TM1637_displayTime">
+      <value name="hour">
+        <shadow type="math_number">
+          <field name="NUM">12</field>
+        </shadow>
+      </value>
+      <value name="minute">
+        <shadow type="math_number">
+          <field name="NUM">30</field>
+        </shadow>
+      </value>
+      <value name="STAT">
+        <shadow type="inout_highlow">
+        </shadow>
+      </value>
+    </block>-->
+
+	 <!--           TM1637数码管初始化              
+		<block type="ke_tm1637_init">
+			<value name="PIN1">
+				<shadow type="pins_digital">4</shadow>
+			</value>
+			<value name="PIN2">
+				<shadow type="pins_digital">3</shadow>
+			</value>
+		</block>
+
+		<block type="ke_tm1637_dy">
+			<value name="num">
+				<shadow type="math_number">
+					<field name="NUM">0</field>
+				</shadow>
+			</value>
+			<value name="weishu">
+				<shadow type="math_number">
+					<field name="NUM">0</field>
+				</shadow>
+			</value>
+			<value name="wei">
+				<shadow type="math_number">
+					<field name="NUM">0</field>
+				</shadow>
+			</value>
+		</block>
+
+		<block type="ke_tm1637_tc">
+			<value name="num">
+				<shadow type="math_number">
+					<field name="NUM">0</field>
+				</shadow>
+			</value>
+			<value name="0and1">
+				<shadow type="math_Boolean">
+					<field name="NUM">0</field>
+				</shadow>
+			</value>
+		</block>
+
+		<block type="ke_tm1637_ld">
+			<value name="num">
+				<shadow type="math_number">
+					<field name="NUM">0</field>
+				</shadow>
+			</value>
+		</block>
+
+
+		<block type="ke_tm1637_yc">
+			<value name="BOOL">
+				<shadow type="math_Boolean">
+					<field name="NUM">0</field>
+				</shadow>
+			</value>
+		</block>
+
+		<block type="ke_tm1637_mh">
+			<value name="num1">
+				<shadow type="math_number">
+					<field name="NUM">0</field>
+				</shadow>
+			</value>
+			<value name="num2">
+				<shadow type="math_number">
+					<field name="NUM">0</field>
+				</shadow>
+			<value name="BOOL">
+				<shadow type="math_Boolean">
+					<field name="NUM">0</field>
+				</shadow>
+			</value>
+		</block>
+	-->
+
+		
+
+		<!--                   8*8点阵                    -->
+	        
+   			<block type="ke_matrix_init">
+   				<value name="address">
+					<shadow type="math_number">
+						<field name="NUM">0x70</field>
+					</shadow>
+				</value>
+
+				<value name="PIN1">
+					<shadow type="pins_digital">
+						<field name="PIN">A4</field>
+					</shadow>
+			    </value>
+
+			    <value name="PIN2">
+					<shadow type="pins_digital">
+						<field name="PIN">A5</field>
+					</shadow>
+			    </value>
+				
+			</block>
+
+
+			<block type="ke_Matrix_POS">
+				<value name="XVALUE">
+				<shadow type="math_number">
+					<field name="XVALUE1">0</field>
+				</shadow>
+			    </value>
+
+			  <value name="YVALUE">
+				<shadow type="math_number">
+					<field name="YVALUE1">0</field>
+				</shadow>
+			    </value>
+		    </block>
+
+
+   			<block type="ke_Matrix_Rotation" name="旋转">
+				
+			</block>
+			
+
+			<block type="ke_matrix_text" name="字符">
+				<value name="TEXT">
+				<shadow type="text">
+                    <field name="TEXT">A</field>
+                </shadow>
+			</value>
+			</block>
+
+			<block type="ke_matrix1" name="点阵屏显示_显示图案">
+				<value name="LEDArray">
+					<block type="ke_matrix2"></block>
+				</value>
+			</block>
+
+			
+
+			<block type="ke_matrix_clear" name="清屏">
+				
+			</block>
+
+
+
+
+		 <!--                1602LCD                    -->
+		<block type="ke_1602lcd_init">
+			<value name="address">
+				<shadow type="math_number">
+					<field name="NUM">0x27</field>
+				</shadow>
+			    </value>
+
+		</block>
+
+
+        <!--                1602LCD                    -->
+		<block type="ke_1602lcd">
+			<value name="TEXT">
+				<shadow type="text">
+                    <field name="TEXT">line1</field>
+                </shadow>
+			</value>
+			<value name="TEXT2">
+				<shadow type="text">
+                    <field name="TEXT">line2</field>
+                </shadow>
+			</value>
+		</block>
+
+		<block type="ke_1602lcd_print2">
+			<value name="row">
+				<shadow type="math_number">
+					<field name="row">1</field>
+				</shadow>
+			</value>
+
+			  <value name="column">
+				<shadow type="math_number">
+					<field name="column">1</field>
+				</shadow>
+			    </value>
+
+			    <value name="TEXT">
+				<shadow type="text">
+                    <field name="TEXT">hello</field>
+                </shadow>
+			</value>
+
+		</block>
+
+		<!--                1602LCD 左移                   -->
+		<block type="ke_1602lcd_left">
+
+		</block>
+
+		<!--                1602LCD 右移                   -->
+		<block type="ke_1602lcd_right">
+
+		</block>
+
+
+		<!--                1602LCD                    -->
+		<block type="ke_1602lcd_clear">
+
+		</block>
+
+
+       <block type="lcd128_init" >
+       </block>
+
+       <block type="lcd128_cursor" >
+       		<value name="row">
+              <shadow type="math_number">
+                  <field name="NUM">0</field>
+              </shadow>
+          </value>
+          <value name="col">
+              <shadow type="math_number">
+                  <field name="NUM">0</field>
+              </shadow>
+            </value>
+       </block>
+
+        <block type="lcd128_string" >
+            <value name="string">
+               <shadow type="text">
+                   <field name="TEXT">abcd</field>
+               </shadow>
+            </value>
+        </block>
+
+        <block type="lcd128_pixel" >
+            <value name="row">
+               <shadow type="math_number">
+                    <field name="NUM">0</field>
+               </shadow>
+            </value>
+            <value name="col">
+               <shadow type="math_number">
+                    <field name="NUM">0</field>
+               </shadow>
+            </value>
+         </block>
+   
+    <block type="lcd128_d_pixel" >
+        <value name="row">
+            <shadow type="math_number">
+                <field name="NUM">0</field>
+            </shadow>
+        </value>
+        <value name="col">
+            <shadow type="math_number">
+                <field name="NUM">0</field>
+            </shadow>
+        </value>
+    </block>
+
+    <block type="lcd128_clear">
+    </block>
+
+	
+
+
+		 
+		 <!--                1602LCD                    
+		<block type="ke_1602lcd_init">
+			<value name="address">
+				<shadow type="math_number">
+					<field name="NUM">0x27</field>
+				</shadow>
+			    </value>
+
+		</block>
+
+
+        
+		<block type="ke_1602lcd">
+			<value name="TEXT">
+				<shadow type="text">
+                    <field name="TEXT">line1</field>
+                </shadow>
+			</value>
+			<value name="TEXT2">
+				<shadow type="text">
+                    <field name="TEXT">line2</field>
+                </shadow>
+			</value>
+		</block>
+
+		<block type="ke_1602lcd_print2">
+			<value name="row">
+				<shadow type="math_number">
+					<field name="row">1</field>
+				</shadow>
+			    </value>
+
+			  <value name="column">
+				<shadow type="math_number">
+					<field name="column">1</field>
+				</shadow>
+			    </value>
+
+			    <value name="TEXT">
+				<shadow type="text">
+                    <field name="TEXT">hello</field>
+                </shadow>
+			</value>
+
+		</block>
+
+		
+		<block type="ke_1602lcd_left">
+
+		</block>
+
+		
+		<block type="ke_1602lcd_right">
+
+		</block>
+
+
+		
+		<block type="ke_1602lcd_clear">
+
+		</block>
+	-->
+
+		
+
+	<!--	<block type="ke_2004lcd">
+			<value name="TEXT1">
+				<block type="text">
+					<field name="TEXT1"></field>
+				</block>
+			</value>
+			<value name="TEXT2">
+				<block type="text">
+					<field name="TEXT2"></field>
+				</block>
+			</value>
+			<value name="TEXT3">
+				<block type="text">
+					<field name="TEXT3"></field>
+				</block>
+			</value>
+			<value name="TEXT4">
+				<block type="text">
+					<field name="TEXT4"></field>
+				</block>
+			</value>
+		</block>
+	-->
+
+	<!--                OLED_init                   
+		<block type="ke_OLED_init">
+
+		</block>
+
+		
+		<block type="ke_OLED_piexl">
+			<value name="val_x">
+				<shadow type="math_number">
+					<field name="NUM1">0</field>
+				</shadow>
+			</value>
+			<value name="val_y">
+				<shadow type="math_number">
+					<field name="NUM2">0</field>
+				</shadow>
+			</value>
+		</block>
+
+		
+		<block type="ke_OLED_line">
+			<value name="val_x1">
+				<shadow type="math_number">
+					<field name="NUM1">0</field>
+				</shadow>
+			</value>
+			<value name="val_y1">
+				<shadow type="math_number">
+					<field name="NUM2">0</field>
+				</shadow>
+			</value>
+
+			<value name="val_x2">
+				<shadow type="math_number">
+					<field name="NUM3">0</field>
+				</shadow>
+			</value>
+			<value name="val_y2">
+				<shadow type="math_number">
+					<field name="NUM4">0</field>
+				</shadow>
+			</value>
+		</block>
+
+		
+		<block type="ke_OLED_rect">
+			<value name="val_x1">
+				<shadow type="math_number">
+					<field name="NUM1">0</field>
+				</shadow>
+			</value>
+			<value name="val_y1">
+				<shadow type="math_number">
+					<field name="NUM2">0</field>
+				</shadow>
+			</value>
+
+			<value name="val_x2">
+				<shadow type="math_number">
+					<field name="NUM3">0</field>
+				</shadow>
+			</value>
+			<value name="val_y2">
+				<shadow type="math_number">
+					<field name="NUM4">0</field>
+				</shadow>
+			</value>
+		</block>
+
+		
+		<block type="ke_OLED_fullrect">
+			<value name="val_x1">
+				<shadow type="math_number">
+					<field name="NUM1">0</field>
+				</shadow>
+			</value>
+			<value name="val_y1">
+				<shadow type="math_number">
+					<field name="NUM2">0</field>
+				</shadow>
+			</value>
+
+			<value name="val_x2">
+				<shadow type="math_number">
+					<field name="NUM3">0</field>
+				</shadow>
+			</value>
+			<value name="val_y2">
+				<shadow type="math_number">
+					<field name="NUM4">0</field>
+				</shadow>
+			</value>
+		</block>
+
+		
+		<block type="ke_OLED_roundrect">
+			<value name="val_x1">
+				<shadow type="math_number">
+					<field name="NUM1">0</field>
+				</shadow>
+			</value>
+			<value name="val_y1">
+				<shadow type="math_number">
+					<field name="NUM2">0</field>
+				</shadow>
+			</value>
+
+			<value name="val_x2">
+				<shadow type="math_number">
+					<field name="NUM3">0</field>
+				</shadow>
+			</value>
+			<value name="val_y2">
+				<shadow type="math_number">
+					<field name="NUM4">0</field>
+				</shadow>
+			</value>
+
+			<value name="val_round">
+				<shadow type="math_number">
+					<field name="NUM5">0</field>
+				</shadow>
+			</value>
+		</block>
+
+		
+		<block type="ke_OLED_fullroundrect">
+			<value name="val_x1">
+				<shadow type="math_number">
+					<field name="NUM1">0</field>
+				</shadow>
+			</value>
+			<value name="val_y1">
+				<shadow type="math_number">
+					<field name="NUM2">0</field>
+				</shadow>
+			</value>
+
+			<value name="val_x2">
+				<shadow type="math_number">
+					<field name="NUM3">0</field>
+				</shadow>
+			</value>
+			<value name="val_y2">
+				<shadow type="math_number">
+					<field name="NUM4">0</field>
+				</shadow>
+			</value>
+
+			<value name="val_round">
+				<shadow type="math_number">
+					<field name="NUM5">0</field>
+				</shadow>
+			</value>
+		</block>
+
+		
+		<block type="ke_OLED_circle">
+			<value name="val_x1">
+				<shadow type="math_number">
+					<field name="NUM1">0</field>
+				</shadow>
+			</value>
+			<value name="val_y1">
+				<shadow type="math_number">
+					<field name="NUM2">0</field>
+				</shadow>
+			</value>
+
+			<value name="val_circle">
+				<shadow type="math_number">
+					<field name="NUM3">0</field>
+				</shadow>
+			</value>
+			
+		</block>
+
+		
+		<block type="ke_OLED_fullcircle">
+			<value name="val_x1">
+				<shadow type="math_number">
+					<field name="NUM1">0</field>
+				</shadow>
+			</value>
+			<value name="val_y1">
+				<shadow type="math_number">
+					<field name="NUM2">0</field>
+				</shadow>
+			</value>
+
+			<value name="val_circle">
+				<shadow type="math_number">
+					<field name="NUM3">0</field>
+				</shadow>
+			</value>
+			
+		</block>
+
+		
+		<block type="ke_OLED_triangle">
+			<value name="val_x1">
+				<shadow type="math_number">
+					<field name="NUM1">0</field>
+				</shadow>
+			</value>
+			<value name="val_y1">
+				<shadow type="math_number">
+					<field name="NUM2">0</field>
+				</shadow>
+			</value>
+
+			<value name="val_x2">
+				<shadow type="math_number">
+					<field name="NUM3">0</field>
+				</shadow>
+			</value>
+			<value name="val_y2">
+				<shadow type="math_number">
+					<field name="NUM4">0</field>
+				</shadow>
+			</value>
+
+			<value name="val_x3">
+				<shadow type="math_number">
+					<field name="NUM5">0</field>
+				</shadow>
+			</value>
+			<value name="val_y3">
+				<shadow type="math_number">
+					<field name="NUM6">0</field>
+				</shadow>
+			</value>
+		</block>
+
+		
+		<block type="ke_OLED_fulltriangle">
+			<value name="val_x1">
+				<shadow type="math_number">
+					<field name="NUM1">0</field>
+				</shadow>
+			</value>
+			<value name="val_y1">
+				<shadow type="math_number">
+					<field name="NUM2">0</field>
+				</shadow>
+			</value>
+
+			<value name="val_x2">
+				<shadow type="math_number">
+					<field name="NUM3">0</field>
+				</shadow>
+			</value>
+			<value name="val_y2">
+				<shadow type="math_number">
+					<field name="NUM4">0</field>
+				</shadow>
+			</value>
+
+			<value name="val_x3">
+				<shadow type="math_number">
+					<field name="NUM5">0</field>
+				</shadow>
+			</value>
+			<value name="val_y3">
+				<shadow type="math_number">
+					<field name="NUM6">0</field>
+				</shadow>
+			</value>
+		</block>
+
+		
+		<block type="ke_OLED_string">
+			<value name="size">
+				<shadow type="math_number">
+					<field name="NUM">0</field>
+				</shadow>
+			</value>
+			<value name="val_x1">
+				<shadow type="math_number">
+					<field name="NUM1">0</field>
+				</shadow>
+			</value>
+			<value name="val_y1">
+				<shadow type="math_number">
+					<field name="NUM2">0</field>
+				</shadow>
+			</value>
+			<value name="TEXT1">
+				<shadow type="text">
+                    <field name="TEXT">hello</field>
+                </shadow>
+			</value>
+			
+		</block>
+
+		<block type="ke_oled">
+			<value name="size">
+				<shadow type="math_number">
+					<field name="NUM">0</field>
+				</shadow>
+			</value>
+			<value name="TEXT1">
+				<shadow type="text">
+                    <field name="TEXT">line1</field>
+                </shadow>
+			</value>
+			<value name="TEXT2">
+				<shadow type="text">
+                    <field name="TEXT">line2</field>
+                </shadow>
+			</value>
+			<value name="TEXT3">
+				<shadow type="text">
+                    <field name="TEXT">line3</field>
+                </shadow>
+			</value>
+			<value name="TEXT4">
+				<shadow type="text">
+                    <field name="TEXT">line4</field>
+                </shadow>
+			</value>
+		</block>
+
+
+		<block type="ke_oled_clear">
+			
+		</block>
+	-->
+
+
+
+	</category>
+
+	<category id="communicate" name="通信模块" colour="20">
+
+  <!--         红外接收               -->   
+		<block type="ke_ir_r">
+			<value name="PIN">
+				<shadow type="pins_digital"></shadow>
+			</value>
+		</block>
+
+  <!--         红外发射             -->   
+		<block type="ke_ir_s">
+			<value name="num1">
+				<shadow type="math_number">
+					<field name="NUM1">0x00</field>
+				</shadow>
+			</value>
+		</block>
+	<!--          rfid_iic              -->
+
+	    <block type="rc522_i2c_init">
+			
+		</block>
+		
+        <block type="rc522_i2c_read">
+			
+		</block>
+		
+
+
+
+  <!--         蓝牙              -->   
+	<block type="ke_bluetooth">
+			<value name="PIN1">
+				<shadow type="pins_digital"></shadow>
+			</value>
+			<value name="PIN2">
+				<shadow type="pins_digital"></shadow>
+			</value>
+		</block>
+   
+</category>
+	<category id="sensor" name="其他模块" colour="20">
+
+	    <!--         ADKey                -->                         
+		<block type="ke_ADKey">
+			<value name="PIN">
+				<shadow type="pins_analog"></shadow>
+			</value>
+		</block>
+		
+  <!--         超声波传感器               -->   
+		<block type="ke_sr04">
+			<value name="PIN1">
+				<shadow type="pins_digital">
+					<field name="PIN">3</field>
+				</shadow>
+			</value>
+			<value name="PIN2">
+				<shadow type="pins_digital">
+					<field name="PIN">4</field>
+				</shadow>
+			</value>	
+		</block>
+
+		<!--              18B20温度模块              -->
+		<block type="ke_18b20">
+			<value name="PIN">
+				<shadow type="pins_digital"></shadow>
+			</value>
+		</block>
+
+	
+		
+
+
+
+		<!--              BMP280高度计模块          
+		<block type="ke_bmp280">
+			
+		</block>
+		 -->  
+        <!--              BMP280高度计模块     -->
+		<block type="ke_BMP280_READ">
+		  <value name="address">
+		    <shadow type="math_number">
+		      <field name="NUM">0x77</field>
+		    </shadow>
+		  </value>
+		</block>
+
+       <block type="ke_adxl345">
+			<value name="PIN">
+				<shadow type="pins_digital"></shadow>
+			</value>
+		</block> 
+
+		<block type="ke_MPU6050_update">
+		</block>
+		<block type="ke_MPU6050">
+		</block>
+		 
+
+		             DS3231模块             
+		 <!-- DS3231 time  SET TIME -->
+        <block type="ke_ds3231_SetTime" >
+          <value name="year">
+            <shadow type="math_number">
+              <field name="NUM">2017</field>
+            </shadow>
+          </value>
+          <value name="month">
+            <shadow type="math_number">
+              <field name="NUM">12</field>
+            </shadow>
+          </value>
+          <value name="day">
+            <shadow type="math_number">
+              <field name="NUM">12</field>
+            </shadow>
+          </value>
+          <value name="hour">
+            <shadow type="math_number">
+              <field name="NUM">12</field>
+            </shadow>
+          </value>
+          <value name="minute">
+            <shadow type="math_number">
+              <field name="NUM">30</field>
+            </shadow>
+          </value>
+          <value name="second">
+            <shadow type="math_number">
+              <field name="NUM">10</field>
+            </shadow>
+          </value>
+        </block>
+      <!-- DS3231 time  SET TIME -->
+        <block type="ke_ds3231_SetTime2" ></block>
+      <!-- DS3231 time  GET TIME -->
+        <block type="ke_ds3231_GetTime"></block>
+      <!-- DS1307 time  SET TIME -->
+        <block type="ke_ds1307_SetTime" >
+          <value name="year">
+            <shadow type="math_number">
+              <field name="NUM">2019</field>
+            </shadow>
+          </value>
+          <value name="month">
+            <shadow type="math_number">
+              <field name="NUM">06</field>
+            </shadow>
+          </value>
+          <value name="day">
+            <shadow type="math_number">
+              <field name="NUM">20</field>
+            </shadow>
+          </value>
+          <value name="hour">
+            <shadow type="math_number">
+              <field name="NUM">10</field>
+            </shadow>
+          </value>
+          <value name="minute">
+            <shadow type="math_number">
+              <field name="NUM">15</field>
+            </shadow>
+          </value>
+          <value name="second">
+            <shadow type="math_number">
+              <field name="NUM">20</field>
+            </shadow>
+          </value>
+        </block>
+      <!-- DS1307 time  SET TIME -->
+        <block type="ke_ds1307_SetTime2" ></block>
+      <!-- DS1307 time  GET TIME -->
+        <block type="ke_ds1307_GetTime"></block>
+
+
+
+		<!--              温湿度模块            
+		<block type="ke_dht11">
+			<value name="PIN">
+				<shadow type="pins_digital"></shadow>
+			</value>
+		</block>
+		 -->
+
+		<block type="ke_DHT">
+		    <value name="PIN">
+		      <shadow type="pins_digital"></shadow>
+		    </value>
+		  </block>
+
+		<!--              旋转编码器            -->
+		<block type="sensor_encoder_init">
+		<value name="CLK">
+			<shadow type="pins_digital">
+			<field name="PIN">2</field>
+			</shadow>
+		</value>
+		<value name="DT">
+			<shadow type="pins_digital">
+			<field name="PIN">3</field>
+			</shadow>
+		</value>
+		</block>
+		<block type="sensor_encoder_get">
+		</block>
+		<block type="sensor_encoder_set">
+		<value name="DATA">
+			<shadow type="math_number">
+			<field name="NUM">0</field>
+			</shadow>
+		</value>
+		</block>
+		<block type="sensor_encoder_handle">
+		</block>
+		<block type="encoder_button">
+		 <value name="PIN">
+			<shadow type="pins_digital"></shadow>
+		 </value>
+		</block>
+
+		<!--              摇杆传感器              -->
+		<block type="ke_joystick">
+			<value name="PIN">
+				<shadow type="pins_analog"></shadow>
+			</value>
+		</block>
+
+		<!--              摇杆传感器_按钮             -->
+		<block type="ke_joystick_btn">
+			<value name="PIN">
+				<shadow type="pins_digital"></shadow>
+			</value>
+		</block>
+		<!--           pca9685                
+		<block type="ke_pca9685">
+			
+			<value name="pin">
+				<shadow type="math_number">
+					<field name="NUM">0</field>
+				</shadow>
+			</value>
+			<value name="pwm">
+				<shadow type="math_number">
+					<field name="NUM">0</field>
+				</shadow>
+			</value>
+			
+		</block>
+		-->
+
+              <!--        红外测温模块         -->  
+	                   
+		<block type="mlx90614_init">
+		  <value name="mlx90614_address">
+		    <shadow type="math_number">
+		      <field name="NUM">0x5A</field>
+		    </shadow>
+		  </value>
+		</block>
+		
+		<block type="mlx90614_get_data">
+		  
+		</block><block type="TCS34725_Get_RGB">
+		  
+		</block>
+	<block type="ke_Gesture_APDS" name="Gesture">
+	</block>
+	<block type="make_arduino_paj7620_begin">
+    </block>
+    <block type="make_arduino_paj7620_ReadReg">
+	</block>
+	<block type="BMP388_INIT" id="BMP388_INIT">
+    </block>
+    <block type="BMP388_READ" id="BMP388_READ">
+    </block>
+	<block type="TFT_SD_init">
+    </block>
+    <block type="TFT_SD_display">
+    <value name="SD_TUPIAN">
+      <block type="text">
+        <field name="TEXT">x.bmp</field>
+      </block>
+    </value>
+    <value name="SD_X">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+    <value name="SD_Y">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+      </block>
+	</category>
+</category>
