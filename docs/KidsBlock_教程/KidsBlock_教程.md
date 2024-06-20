@@ -7,7 +7,9 @@
 
 参考链接：[https://www.keyesrobot.cn/projects/KidsBlock/en/latest/](https://www.keyesrobot.cn/projects/KidsBlock/en/latest/)
 
-<span style="color: rgb(255, 76, 65);">注意：</span><span style="background:#ff0;color:#000">本教程使用的是"**Keyes STEM development board**"主控板，打开KidsBlock软件，点击"Keyes STEM development board"，就可以进入对应的编程界面。</span>
+<span style="color: rgb(255, 76, 65);">注意：</span><span style="background:#ff0;color:#000">本教程选用的是“**Keyes STEM development board**”主控板，打开KidsBlock软件，点击![Img](./media/img-2024060515181812.png)进入**设备**选择页面，找到并点击选中““**Keyes STEM development board**”主控板，这样就可以进入对应的编程界面。</span>
+
+![Img](./media/img-202406051518181.png)
 
 ![Img](./media/img-20240605151818.png)
 
@@ -47,7 +49,7 @@
 
 ![Img](./media/img-20240605160639.png)
 
-上述所有的库文件添加完后，点击KidsBlock软件左上角![Img](./media/img-20240605161144.png)返回编程界面。这样，可以在编程界面的左侧看到所添加的所有库文件。
+上述所有的库文件添加完后，点击KidsBlock软件左上角的![Img](./media/img-20240605161144.png)返回编程界面。这样，就可以在编程界面的左侧看到所添加的所有库文件。
 
 ![Img](./media/img-20240605161427.png)
 

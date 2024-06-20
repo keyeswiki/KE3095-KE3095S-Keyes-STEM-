@@ -14,14 +14,12 @@ Mixly软件使用方法的参考链接：[https://mixly.readthedocs.io/zh-cn/lat
 
 ![Img](./media/img-20240607111156.png)
 
-
 ---
 
 ## 2. 添加 Mixly 库文件
 
 <span style="font-size: 24px; color: rgb(255, 76, 65);">**注意：Mixly 库文件必须添加好，否则后面的示例代码打不开**。</span>
 
-<br>
 <br>
 
 Mixly 软件下载安装后，点击Arduino AVR 进入代码编辑器，先点击右上角“**设置**”，再点击“**管理库**”进入添加库文件界面。

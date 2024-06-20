@@ -1,7 +1,7 @@
 
 .. toctree::
    :maxdepth: 3
-   :caption: Keyes Arduino UNO R4 42款传感器学习套装
+   :caption: Keyes STEM电子积木传感器高级套件
 
    README.md
    docs/index.md
