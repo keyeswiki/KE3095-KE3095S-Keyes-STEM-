@@ -1,7 +1,7 @@
 # SevenSegmentTM1637 Arduino Library
 
-* master&nbsp;&nbsp;[![Build Status](https://travis-ci.org/bremme/arduino-tm1637.svg?branch=master)](https://travis-ci.org/bremme/arduino-tm1637)
-* develop&nbsp;[![Build Status](https://travis-ci.org/bremme/arduino-tm1637.svg?branch=develop)](https://travis-ci.org/bremme/arduino-tm1637)
+* master&nbsp;&nbsp;[![图片不存在](https://travis-ci.org/bremme/arduino-tm1637.svg?branch=master)](https://travis-ci.org/bremme/arduino-tm1637)
+* develop&nbsp;[![图片不存在](https://travis-ci.org/bremme/arduino-tm1637.svg?branch=develop)](https://travis-ci.org/bremme/arduino-tm1637)
 
 
 Arduino library for controlling a TM163x based 7-segment display module. These modules are sold under various names by various suppliers. For example:
@@ -12,7 +12,7 @@ Arduino library for controlling a TM163x based 7-segment display module. These m
 
 They come in different sizes, colors and there is a clock (with a colon) and decimal (with four decimal dots) display variant. But the most common one is the red 0.36" clock version, this is also the cheapest one (you can get those for about $1.50). I've written this library using the above module, if I get my hands on any of the other variants I might add some specific code, for example to print floats on the decimal version.
 
-![TM1637](extras/img/TM1637-4-digit-colon.jpg)
+![图片不存在](extras/img/TM1637-4-digit-colon.jpg)
 
 # Hardware setup
 

@@ -1,4 +1,4 @@
-# DHT sensor library [![Build Status](https://github.com/adafruit/DHT-sensor-library/workflows/Arduino%20Library%20CI/badge.svg)](https://github.com/adafruit/DHT-sensor-library/actions)
+# DHT sensor library [![图片不存在](https://github.com/adafruit/DHT-sensor-library/workflows/Arduino%20Library%20CI/badge.svg)](https://github.com/adafruit/DHT-sensor-library/actions)
 
 ## Description
 
