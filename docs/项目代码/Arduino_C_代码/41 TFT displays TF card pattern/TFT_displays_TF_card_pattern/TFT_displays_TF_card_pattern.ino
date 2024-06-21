@@ -69,8 +69,8 @@ void loop()
 void Voltage_Test()
 {
   tft.setTextSize(1);
-  String A6_Value = String(analogRead(A6) *5.0 / 1023 * 2.0);
-  String A7_Value = String(analogRead(A7) *5.0 / 1023 * 2.0);
+  String A6_Value = String(analogRead(A6) *5.0 / 1023);
+  String A7_Value = String(analogRead(A7) *5.0 / 1023);
   Serial.println(String("A6_Value:") + A6_Value + " V");
   Serial.println(String("A7_Value:") + A7_Value + " V");
   tft.setTextColor(ST7735_BLACK);
