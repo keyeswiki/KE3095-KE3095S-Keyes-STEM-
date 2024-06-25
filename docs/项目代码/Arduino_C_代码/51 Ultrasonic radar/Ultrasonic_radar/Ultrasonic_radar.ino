@@ -1,14 +1,21 @@
 /*  
  * 名称   : Ultrasonic radar
- * 功能   : 超声波控制四位数管，蜂鸣器和RGB灯模拟超声波雷达
+ * 功能   : 超声波控制TFT显示屏，蜂鸣器和RGB灯模拟超声波雷达
  * 作者   : http://www.keyes-robot.com/ 
 */
+#include <Adafruit_GFX.h>
+#include <Adafruit_ST7735.h>
+#include <SPI.h>
 #include <FastLED.h>  //导入FastLED库文件
-#include "TM1650.h" //导入TM1650库文件
-//四位数码管的接口为A4和A5
-#define DIO A4
-#define CLK A5
-TM1650 DigitalTube(CLK,DIO);
+
+// 定义TFT屏的引脚
+#define CS   8
+#define RST  9
+#define DC   10
+#define MOSI  11
+#define SCK   13
+
+Adafruit_ST7735 tft = Adafruit_ST7735(CS, DC, RST);
 
 #define BUZZER_PIN  A2    //定义无源蜂鸣器引脚为A2
 
@@ -37,24 +44,29 @@ float checkdistance() { //得到的距离
 
 void setup() {
   pinMode(BUZZER_PIN, OUTPUT);  // 设置蜂鸣器为输出模式
-  
-  DigitalTube.setBrightness();  //设置亮度，0- 7，默认值:2
-  DigitalTube.displayOnOFF();   //显示打开或关闭，0=显示关闭，1=显示打开，默认值:1
-  for(char b=1;b<5;b++){
-    DigitalTube.clearBit(b);    //DigitalTube.clearBit(0 to 3); 清空位显示
-  }
-  
-  DigitalTube.displayBit(1,0);  //DigitalTube.Display(bit,number); bit= 0 - 3，number= 0 - 9
   pinMode(TrigPin, OUTPUT);     //设置Trig引脚作为输出
   pinMode(EchoPin, INPUT);      //设置Echo引脚作为输入
- 
   FastLED.addLeds<WS2812B, LED_PIN, GRB>(leds, NUM_LEDS);
   FastLED.setBrightness(50);   //设置SK6812 RGB的亮度
+  tft.initR(INITR_BLACKTAB); // 屏幕初始化
+  tft.fillScreen(ST7735_BLACK); // 清屏 
+  delay(1000);
 }
 
 void loop() {
+  tft.setTextSize(1);   //设置显示字符大小
+  tft.setRotation(1);   //反转90°
+  tft.setTextColor(ST7735_WHITE); //设置显示字符为白色
+  tft.fillScreen(ST7735_BLACK);  // 清屏 
   distance = checkdistance();//超声波测距
-  displayFloatNum(distance); //数码管显示距离
+  tft.setCursor(10, 50);  //设置显示的位置
+  tft.print("distance:");  //打印字符
+  tft.setCursor(70, 50); 
+  tft.print(distance);
+  tft.setCursor(100, 50);  //设置显示的位置
+  tft.print("cm");  //打印字符
+  delay(300);
+  tft.fillScreen(ST7735_BLACK); // 清屏  
   if (distance <= 10) {   
     fill_solid(leds, NUM_LEDS, CRGB::Red);  // SK6812 RGB模块4个LED灯珠亮红色灯
     FastLED.show();
@@ -73,36 +85,4 @@ void loop() {
     tone(BUZZER_PIN, 494); //Si播放125ms
     delay(125);
   }
-}
-
-void displayFloatNum(float distance){
-  if(distance > 9999)
-    return;
-  int dat = distance*10;
-   //DigitalTube.displayDot(2,true); //Bit0 显示点。在displayBit()之前使用。
-  if(dat/10000 != 0){
-    DigitalTube.displayBit(0, dat%100000/10000);  
-    DigitalTube.displayBit(1, dat%10000/1000);
-    DigitalTube.displayBit(2, dat%1000/100);
-    DigitalTube.displayBit(3, dat%100/10);
-    return;
-  }
-  if(dat%10000/1000 != 0){
-    DigitalTube.clearBit(0); 
-    DigitalTube.displayBit(1, dat%10000/1000); 
-    DigitalTube.displayBit(2, dat%1000/100);
-    DigitalTube.displayBit(3, dat%100/10);
-    return;
-  }
-  if(dat%1000/100 != 0){
-  DigitalTube.clearBit(0); 
-  DigitalTube.clearBit(1);
-  DigitalTube.displayBit(2, dat%1000/100);
-  DigitalTube.displayBit(3, dat%100/10);  
-  return;
-}
-  DigitalTube.clearBit(0); 
-  DigitalTube.clearBit(1);
-  DigitalTube.clearBit(2);
-  DigitalTube.displayBit(3, dat%100/10);
 }

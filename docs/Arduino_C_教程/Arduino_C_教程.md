@@ -6787,21 +6787,19 @@ void displayFloatNum(float temper){
 
 蝙蝠飞行与获取猎物是通过回声定位的。回声定位：某些动物能通过口腔或鼻腔把从喉部产生的超声波发射出去，利用折回的声音来定向，这种空间定向的方法称为回声定位。科学家们从蝙蝠身上得到的启示发明了雷达，即雷达的天线相当于蝙蝠的嘴，而天线发出的无线电波就相当于蝙蝠的超声波，雷达接收电波的荧光屏就相当于蝙蝠的耳朵。
 
-这一课我们就来学习制作一个简易雷达。将HC-SR04 超声波传感器、无源蜂鸣器、SK6812 RGB模块和TM1650四位数码管模块组合实验，利用距离大小控制无源蜂鸣器响起对应频率的声音、SK6812 RGB模块上4个LED灯珠亮起对应颜色灯，然后把这个距离显示在四位数码管上。这样就搭建好了一个简易的超声波雷达系统。
+这一课我们就来学习制作一个简易雷达。将HC-SR04 超声波传感器、无源蜂鸣器、SK6812 RGB模块和主板上的TFT显示屏组合实验，利用距离大小控制无源蜂鸣器响起对应频率的声音、SK6812 RGB模块上4个LED灯珠亮起对应颜色灯，然后把这个距离显示在TFT显示屏上。这样就搭建好了一个简易的超声波雷达系统。
 
 ---
 
 **2. 实验组件**
 
-| ![img](media/KS5016.png) | ![img](media/ultrasonic.png) | ![img](media/KE4039.png)|
-| ---------------------------- | ---------------------------- | ----------------------------- |
-|主板 x1  |HC-SR04 超声波传感器 x1      | 超声波转接模块 x1 |
-| ![img](media/KE4067.png) | ![img](media/KE4009.png) | ![img](media/KE4060.png) | 
-| 无源蜂鸣器 x1  | SK6812 RGB模块 x1  | TM1650四位数码管 x1 |
-|![img](media/3pin.png) | ![img](media/4pin.png) | ![img](media/USB.jpg)  |
-|3P线(反向) x2| 4P线(反向) x2 | USB线  x1  |
-|![](media/WS4.png)|![](media/6.png)| |
-|电池盒 x1 |AA电池 x6 |   |
+| ![img](media/KS5016.png) | ![img](media/ultrasonic.png) | ![img](media/KE4039.png)|![](media/WS4.png)|
+| ---------------------------- | ---------------------------- | ----------------------------- | ----------------------------- |
+|主板 x1  |HC-SR04 超声波传感器 x1 | 超声波转接模块 x1 |电池盒 x1 |
+| ![img](media/KE4067.png) | ![img](media/KE4009.png)  |![](media/6.png)| ![img](media/3pin.png) |
+| 无源蜂鸣器 x1  | SK6812 RGB模块 x1  | AA电池 x6 |3P线(反向) x2|
+| ![img](media/4pin.png) | ![img](media/USB.jpg)  |  |  |
+| 4P线(反向) x1 | USB线  x1  |   |     |
 
 ---
 
@@ -6822,15 +6820,22 @@ void displayFloatNum(float temper){
 ```c++
 /*  
  * 名称   : Ultrasonic radar
- * 功能   : 超声波控制四位数管，蜂鸣器和RGB灯模拟超声波雷达
+ * 功能   : 超声波控制TFT显示屏，蜂鸣器和RGB灯模拟超声波雷达
  * 作者   : http://www.keyes-robot.com/ 
 */
+#include <Adafruit_GFX.h>
+#include <Adafruit_ST7735.h>
+#include <SPI.h>
 #include <FastLED.h>  //导入FastLED库文件
-#include "TM1650.h" //导入TM1650库文件
-//四位数码管的接口为A4和A5
-#define DIO A4
-#define CLK A5
-TM1650 DigitalTube(CLK,DIO);
+
+// 定义TFT屏的引脚
+#define CS   8
+#define RST  9
+#define DC   10
+#define MOSI  11
+#define SCK   13
+
+Adafruit_ST7735 tft = Adafruit_ST7735(CS, DC, RST);
 
 #define BUZZER_PIN  A2    //定义无源蜂鸣器引脚为A2
 
@@ -6859,24 +6864,29 @@ float checkdistance() { //得到的距离
 
 void setup() {
   pinMode(BUZZER_PIN, OUTPUT);  // 设置蜂鸣器为输出模式
-  
-  DigitalTube.setBrightness();  //设置亮度，0- 7，默认值:2
-  DigitalTube.displayOnOFF();   //显示打开或关闭，0=显示关闭，1=显示打开，默认值:1
-  for(char b=1;b<5;b++){
-    DigitalTube.clearBit(b);    //DigitalTube.clearBit(0 to 3); 清空位显示
-  }
-  
-  DigitalTube.displayBit(1,0);  //DigitalTube.Display(bit,number); bit= 0 - 3，number= 0 - 9
   pinMode(TrigPin, OUTPUT);     //设置Trig引脚作为输出
   pinMode(EchoPin, INPUT);      //设置Echo引脚作为输入
- 
   FastLED.addLeds<WS2812B, LED_PIN, GRB>(leds, NUM_LEDS);
   FastLED.setBrightness(50);   //设置SK6812 RGB的亮度
+  tft.initR(INITR_BLACKTAB); // 屏幕初始化
+  tft.fillScreen(ST7735_BLACK); // 清屏 
+  delay(1000);
 }
 
 void loop() {
+  tft.setTextSize(1);   //设置显示字符大小
+  tft.setRotation(1);   //反转90°
+  tft.setTextColor(ST7735_WHITE); //设置显示字符为白色
+  tft.fillScreen(ST7735_BLACK);  // 清屏 
   distance = checkdistance();//超声波测距
-  displayFloatNum(distance); //数码管显示距离
+  tft.setCursor(10, 50);  //设置显示的位置
+  tft.print("distance:");  //打印字符
+  tft.setCursor(70, 50); 
+  tft.print(distance);
+  tft.setCursor(100, 50);  //设置显示的位置
+  tft.print("cm");  //打印字符
+  delay(300);
+  tft.fillScreen(ST7735_BLACK); // 清屏  
   if (distance <= 10) {   
     fill_solid(leds, NUM_LEDS, CRGB::Red);  // SK6812 RGB模块4个LED灯珠亮红色灯
     FastLED.show();
@@ -6897,37 +6907,6 @@ void loop() {
   }
 }
 
-void displayFloatNum(float distance){
-  if(distance > 9999)
-    return;
-  int dat = distance*10;
-   //DigitalTube.displayDot(2,true); //Bit0 显示点。在displayBit()之前使用。
-  if(dat/10000 != 0){
-    DigitalTube.displayBit(0, dat%100000/10000);  
-    DigitalTube.displayBit(1, dat%10000/1000);
-    DigitalTube.displayBit(2, dat%1000/100);
-    DigitalTube.displayBit(3, dat%100/10);
-    return;
-  }
-  if(dat%10000/1000 != 0){
-    DigitalTube.clearBit(0); 
-    DigitalTube.displayBit(1, dat%10000/1000); 
-    DigitalTube.displayBit(2, dat%1000/100);
-    DigitalTube.displayBit(3, dat%100/10);
-    return;
-  }
-  if(dat%1000/100 != 0){
-  DigitalTube.clearBit(0); 
-  DigitalTube.clearBit(1);
-  DigitalTube.displayBit(2, dat%1000/100);
-  DigitalTube.displayBit(3, dat%100/10);  
-  return;
-}
-  DigitalTube.clearBit(0); 
-  DigitalTube.clearBit(1);
-  DigitalTube.clearBit(2);
-  DigitalTube.displayBit(3, dat%100/10);
-}
 ```
 
 参照第01课或第02课的示例，根据主板选择对应的主板板型（Arduino Uno）和串口端口，然后将示例代码上传到主板上。
@@ -6938,15 +6917,15 @@ void displayFloatNum(float distance){
 
 上传代码，代码上传成功后，拔下USB线断电，按照接线图正确接好模块后，给主板外接电源供电（将装有电池的电池盒接到主板上）。
 
-当超声波传感器检测到障碍物距离范围在10cm 以内时，SK6812 RGB模块上的4个LED灯亮红色，并将检测到障碍物的距离显示在四位数码管上。同时无源蜂鸣器发出声响，起到提示的作用。
+当超声波传感器检测到障碍物距离范围在10cm 以内时，SK6812 RGB模块上的4个LED灯亮红色，并将检测到障碍物的距离显示在TFT显示屏上。同时无源蜂鸣器发出声响，起到提示的作用。
 
 ![Img](./media/img-20240611085702.png)
 
-当超声波传感器检测到障碍物距离范围在10cm ~ 20cm 以内时，SK6812 RGB模块上的4个LED灯亮绿色，并将检测到障碍物的距离显示在四位数码管上。同时无源蜂鸣器发出声响，起到提示的作用。
+当超声波传感器检测到障碍物距离范围在10cm ~ 20cm 以内时，SK6812 RGB模块上的4个LED灯亮绿色，并将检测到障碍物的距离显示TFT显示屏上。同时无源蜂鸣器发出声响，起到提示的作用。
 
 ![Img](./media/img-20240611085339.png)
 
-当超声波传感器检测到障碍物距离范围在20cm 以外时，SK6812 RGB模块上的4个LED灯亮蓝色，并将检测到障碍物的距离显示在四位数码管上。同时无源蜂鸣器发出声响，起到提示的作用。
+当超声波传感器检测到障碍物距离范围在20cm 以外时，SK6812 RGB模块上的4个LED灯亮蓝色，并将检测到障碍物的距离显示在TFT显示屏上。同时无源蜂鸣器发出声响，起到提示的作用。
 
 ![Img](./media/img-20240611085951.png)
 
