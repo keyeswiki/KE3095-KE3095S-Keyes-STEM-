@@ -5,7 +5,7 @@
 
 ## 1. KidsBlock 软件的下载、安装和使用方法
 
-参考链接：[https://www.keyesrobot.cn/projects/KidsBlock/en/latest/](https://www.keyesrobot.cn/projects/KidsBlock/en/latest/)
+参考链接：[https://www.keyesrobot.cn/projects/KidsBlock/zh-cn/latest/](https://www.keyesrobot.cn/projects/KidsBlock/zh-cn/latest/)
 
 <span style="color: rgb(255, 76, 65);">注意：</span><span style="background:#ff0;color:#000">本教程选用的是“**Keyes STEM development board**”主控板，打开KidsBlock软件，点击![Img](./media/img-2024060515181812.png)进入**设备**选择页面，找到并点击选中““**Keyes STEM development board**”主控板，这样就可以进入对应的编程界面。</span>
 
